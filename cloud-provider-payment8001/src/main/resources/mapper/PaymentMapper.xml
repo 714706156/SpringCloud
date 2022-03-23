@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.seal.mapper.PaymentMapper">
     <insert id="create" parameterType="com.seal.pojo.Payment">
-        insert int payment(serial) values (#{serial});
+        insert into payment(serial) values (#{serial});
     </insert>
 
     <select id="getPaymentById" parameterType="integer" resultType="com.seal.pojo.Payment">
