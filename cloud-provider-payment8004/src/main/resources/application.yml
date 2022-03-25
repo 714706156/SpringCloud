@@ -1,0 +1,24 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-provider-payment
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/java_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    druid:
+      test-while-idle: false
+
+  cloud:
+    zookeeper:
+      connect-string: 192.168.62.129:2181
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.seal.pojo
