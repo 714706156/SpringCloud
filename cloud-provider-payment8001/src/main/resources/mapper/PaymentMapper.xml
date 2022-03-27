@@ -7,7 +7,6 @@
         insert into payment(serial) values (#{serial});
     </insert>
 
-
     <select id="getPaymentById" parameterType="integer" resultType="com.seal.pojo.Payment">
         select * from payment where id=#{id}
     </select>
